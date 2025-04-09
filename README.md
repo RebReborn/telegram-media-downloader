@@ -2,7 +2,7 @@
 
 A web application that allows you to download media (photos, videos, documents) from Telegram chats and channels you have access to.
 
-![App Screenshot](screenshot.png) <!-- Add a screenshot if available -->
+![App Screenshot](images/screenshot.png)
 
 ## Features
 
@@ -22,7 +22,7 @@ A web application that allows you to download media (photos, videos, documents) 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/telegram-media-downloader.git
+   git clone https://github.com/rebreborn/telegram-media-downloader.git
    cd telegram-media-downloader
    ```
 
