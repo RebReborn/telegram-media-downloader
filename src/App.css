@@ -1,0 +1,264 @@
+.App {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    gap: 5px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+    .tab.active {
+        border-bottom: 2px solid #0088cc;
+        font-weight: bold;
+        color: #0088cc;
+    }
+
+    .tab:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+.tab-content {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    min-height: 300px;
+}
+
+.auth-container,
+.download-container,
+.about-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background: #0088cc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+    button:hover:not(:disabled) {
+        background: #006699;
+    }
+
+    button:focus {
+        outline: 2px solid #0088cc;
+        outline-offset: 2px;
+    }
+
+    button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+input:focus {
+    border-color: #0088cc;
+    box-shadow: 0 0 5px rgba(0, 136, 204, 0.3);
+    outline: none;
+}
+
+.connect-btn, .fetch-btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.disconnect-btn {
+    width: 100%;
+    margin-top: 10px;
+    background: #dc3545;
+}
+
+    .disconnect-btn:hover:not(:disabled) {
+        background: #c82333;
+    }
+
+.download-btn {
+    background: #28a745;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+    .download-btn:hover:not(:disabled) {
+        background: #218838;
+    }
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+    .search-container input {
+        flex: 1;
+    }
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.media-item {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    background: white;
+    transition: transform 0.2s;
+}
+
+    .media-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+.media-preview {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+.filename {
+    display: block;
+    font-size: 12px;
+    margin-top: 8px;
+    word-break: break-all;
+}
+
+.status {
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+    .status.loading {
+        background: #e3f2fd;
+        color: #1976d2;
+    }
+
+    .status.info {
+        background: #e8f5e9;
+        color: #388e3c;
+    }
+
+    .status.error {
+        background: #ffebee;
+        color: #d32f2f;
+    }
+
+    .status.success {
+        background: #e8f5e9;
+        color: #388e3c;
+    }
+
+.progress-container {
+    height: 20px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #0088cc;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    transition: width 0.3s ease-in-out;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    grid-column: 1 / -1;
+}
+
+.about-container ol {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.disclaimer {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff8e1;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.verification-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+}
+
+    .verification-box input {
+        flex: 1;
+        margin: 0;
+    }
+
+.verify-btn {
+    background: #28a745;
+    white-space: nowrap;
+}
+
+    .verify-btn:hover:not(:disabled) {
+        background: #218838;
+    }
+
+@media (max-width: 600px) {
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tabs {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .verification-box {
+        flex-direction: column;
+    }
+}
