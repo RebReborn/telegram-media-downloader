@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const path = require('path');
 
 module.exports = {
   webpack: {
@@ -18,19 +17,17 @@ module.exports = {
         "path": require.resolve("path-browserify"),
         "constants": require.resolve("constants-browserify"),
         "vm": require.resolve("vm-browserify"),
-        "util": require.resolve("util/")
+        "process": require.resolve("process/browser.js")
       };
 
       webpackConfig.plugins = [
         ...webpackConfig.plugins,
         new webpack.ProvidePlugin({
-          process: 'process/browser',
-          Buffer: ['buffer', 'Buffer'],
-        }),
+          process: 'process/browser.js',
+          Buffer: ['buffer', 'Buffer']
+        })
       ];
 
-      webpackConfig.ignoreWarnings = [/Failed to parse source map/];
-      
       return webpackConfig;
     }
   }
