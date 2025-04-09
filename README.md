@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# Telegram Media Downloader
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application that allows you to download media (photos, videos, documents) from Telegram chats and channels you have access to.
 
-## Available Scripts
+![App Screenshot](screenshot.png) <!-- Add a screenshot if available -->
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Secure authentication with Telegram API
+- Download media from private chats, groups, and channels
+- View media previews before downloading
+- Download multiple files at once
+- Responsive design works on desktop and mobile
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Telegram API ID and Hash from [my.telegram.org](https://my.telegram.org/apps)
+- Node.js (v14 or higher)
+- npm or yarn
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/telegram-media-downloader.git
+   cd telegram-media-downloader
+   ```
 
-### `npm run build`
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Open your browser and visit:
+   ```
+   http://localhost:3000
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+### Authentication Tab:
+- Enter your Telegram API ID and Hash
+- Provide your phone number in international format (e.g., +1234567890)
+- Click "Connect to Telegram"
+- Enter the verification code received via Telegram
+- Click "Verify Code"
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Download Media Tab:
+- Enter a chat ID (numeric) or username (with @)
+- Click "Fetch Media"
+- Browse the media files
+- Click "Download" on any file to save it
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### About Tab:
+- Contains usage instructions and important notes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Configuration
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For production builds, create a `.env` file with:
+```env
+REACT_APP_API_ID=your_api_id
+REACT_APP_API_HASH=your_api_hash
+```
 
-## Learn More
+## Troubleshooting
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **"PHONE_NUMBER_INVALID" error**: Ensure your phone number includes country code (e.g., +1 for US)
+- **Verification issues**: Try reconnecting if the code doesn't work
+- **No media found**: Make sure you have access to the chat and it contains media files
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Important Notes
 
-### Code Splitting
+- This app runs entirely in your browser - your credentials are never sent to any server
+- You can only access chats you're a member of
+- Respect Telegram's Terms of Service and copyright laws
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Built With
 
-### Analyzing the Bundle Size
+- **React** - Frontend framework
+- **Telegram Client Library** - Telegram API integration
+- **GramJS** - Telegram client library
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgments
 
-### Advanced Configuration
+- Telegram for their API
+- GramJS developers
+- All open-source contributors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+### How to Use This README:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Save this as `README.md` in your project root.
+2. Customize sections with your specific information:
+   - Add your GitHub repository URL
+   - Include a screenshot (save as `screenshot.png` in project root)
+   - Update any configuration details
+   - Add your license file if using something other than MIT
+3. For deployment instructions, you might want to add sections for:
+   
+   ## Deployment
+   
+   To build for production:
+   ```bash
+   npm run build
+   ```
+   Then deploy the build folder to your hosting provider (Netlify, Vercel, GitHub Pages, etc.)
+```
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Make sure to update the repository URL (`https://github.com/yourusername/telegram-media-downloader.git`) and any other personalized details like the Telegram API keys when using this README in your project.
