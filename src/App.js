@@ -1,6 +1,7 @@
 ﻿import React, { useState, useRef, useEffect } from 'react';
 import { TelegramClient } from 'telegram';
 import { StringSession } from 'telegram/sessions';
+import { Analytics } from "@vercel/analytics/react"
 import './App.css';
 
 function App() {
