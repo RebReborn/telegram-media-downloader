@@ -97,23 +97,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-### How to Use This README:
-
-1. Save this as `README.md` in your project root.
-2. Customize sections with your specific information:
-   - Add your GitHub repository URL
-   - Include a screenshot (save as `screenshot.png` in project root)
-   - Update any configuration details
-   - Add your license file if using something other than MIT
-3. For deployment instructions, you might want to add sections for:
-   
-   ## Deployment
-   
-   To build for production:
-   ```bash
-   npm run build
-   ```
-   Then deploy the build folder to your hosting provider (Netlify, Vercel, GitHub Pages, etc.)
-```
-
-Make sure to update the repository URL (`https://github.com/yourusername/telegram-media-downloader.git`) and any other personalized details like the Telegram API keys when using this README in your project.
